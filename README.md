@@ -2,7 +2,7 @@
 
 A plugin to make you stop using Neovim and use VSCode instead.
 
-> Haha, this is a joke, Neovim users please don't doxx me.
+> Forgive me, Neovim god. For the sins I have ~~git~~ committed
 
 ## Installation
 
