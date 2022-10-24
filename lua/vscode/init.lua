@@ -5,9 +5,15 @@ function stop_using_neovim()
     if (vscode.is_vscode_installed()) then
         os.execute("code . &")
     else
-        print(vscode.get_download_message())
         --TODO: Implement download function to download VSCode >:)
-        --vscode.download_vscode()
+        local is_downloaded = vscode.download_vscode()
+        if is_downloaded then
+            print("Download VSCode successfully!")
+            os.execute("code . &")
+        else
+            print("Cannot download VSCode at the moment.")
+            print(vscode.get_download_message())
+        end
     end
     vim.ui.input({ prompt = "Enter any key to continue..."},
     function (_)

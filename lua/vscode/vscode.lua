@@ -31,11 +31,11 @@ function vscode.get_download_message()
 end
 
 function vscode.download_vscode()
-    local result
-    print("Downloading VSCode...")
-    result = os.execute("cd ~ && git clone https://github.com/microsoft/vscode")
-    result = os.execute("cd ~/vscode && yarn")
-    print("Successfully installed VSCode!")
+    local result = os.execute("make")
+    if (result == 0) then
+        return true
+    end
+    return false
 end
 
 function vscode.is_vscode_installed()
