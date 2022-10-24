@@ -22,7 +22,6 @@ __      ___                 _    _____ _             _ _          _____         
     \/   |_|___/\__,_|\__,_|_| |_____/ \__|\__,_|\__,_|_|\___/   \_____\___/ \__,_|\___|
 
 
-
             Stop using NeoVim. Use VsCode like a real programmer instead.
     ]]
 end
