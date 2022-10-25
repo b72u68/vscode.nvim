@@ -32,20 +32,14 @@ end
 
 function vscode.download_vscode()
     local result = os.execute("make")
-    if (result == 0) then
-        return true
-    end
-    return false
+    return result == 0
 end
 
 function vscode.is_vscode_installed()
     local handle = io.popen("which code")
     local result = handle:read("*a")
     handle:close()
-    if (result == nil or result:gsub("%s+", "") == "") then
-        return false
-    end
-    return true
+    return result ~= nil and result:gsub("%s+", "") ~= ""
 end
 
 return vscode

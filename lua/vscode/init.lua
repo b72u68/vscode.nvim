@@ -15,7 +15,7 @@ function stop_using_neovim()
             print(vscode.get_download_message())
         end
     end
-    vim.ui.input({ prompt = "Enter any key to continue..."},
+    vim.ui.input({ prompt = "Press enter to continue..."},
     function (_)
         vim.cmd("qa!")
     end)
