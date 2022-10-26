@@ -42,4 +42,8 @@ function vscode.is_vscode_installed()
     return result ~= nil and result:gsub("%s+", "") ~= ""
 end
 
+function vscode.open_vscode()
+    os.execute("code . &")
+end
+
 return vscode
