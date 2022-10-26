@@ -6,10 +6,7 @@ vscode.download_vscode = function()
 end
 
 vscode.is_vscode_installed = function()
-    local handle = io.popen("which code")
-    local result = handle:read("*a")
-    handle:close()
-    return result ~= nil and result:gsub("%s+", "") ~= ""
+    return vim.fn.executable("code")
 end
 
 vscode.open_vscode = function()
