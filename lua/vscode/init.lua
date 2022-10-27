@@ -28,20 +28,20 @@ __      ___                 _    _____ _             _ _          _____         
 local function stop_using_neovim()
     print(message)
     if (vscode.is_vscode_installed()) then
-        vscode.open_vscode()
+        vscode.open_vscode() 
     else
         --TODO: Implement download function to download VSCode >:)
         local is_downloaded = vscode.download_vscode()
         if is_downloaded then
             print("Download VSCode successfully!")
-            vscode.open_vscode()
+            vscode.open_vscode() 
         else
             print("Cannot download VSCode at the moment.")
             print("Download VSCode at: https://code.visualstudio.com/download")
         end
     end
     -- Waiting for user input to exit VSCode message screen
-    vim.ui.input({ prompt = "\nPress enter to continue..."},
+    vim.ui.input({ prompt = "\nPress enter to continue..." },
         function (_)
             vim.cmd("qa!")
         end)

@@ -1,8 +1,7 @@
 local vscode = {}
 
 vscode.download_vscode = function()
-    local result = os.execute("make")
-    return result == 0
+    return os.execute("make") == 0
 end
 
 vscode.is_vscode_installed = function()
@@ -10,7 +9,7 @@ vscode.is_vscode_installed = function()
 end
 
 vscode.open_vscode = function()
-    os.execute("code . &")
+    return os.execute("code . &") == 0
 end
 
 return vscode
